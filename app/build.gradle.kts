@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.mytenantmanagamenntsystem2"
+    namespace = "com.example.tenantmanagementsystemgroupa"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.mytenantmanagamenntsystem2"
+        applicationId = "com.example.tenantmanagementsystemgroupa"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
