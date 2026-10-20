@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.tenantmanagementsystemgroupa.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
@@ -29,6 +30,14 @@ class DashboardFragment : Fragment() {
 
         binding.tenantCountTextView.text = "Tenants\n$tenantCount"
         binding.totalRentTextView.text = "Total rent\nKSh %,.0f".format(totalRent)
+
+        binding.addTenantButton.setOnClickListener {
+            findNavController().navigate(R.id.action_dashboardFragment_to_addTenantFragment)
+        }
+
+        binding.viewTenantsButton.setOnClickListener {
+            findNavController().navigate(R.id.action_dashboardFragment_to_viewTenantsFragment)
+        }
     }
 
     override fun onDestroyView() {
